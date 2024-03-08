@@ -17,7 +17,7 @@ import java.util.Properties;
 @ComponentScan(basePackages = "com.zaurtregulov.spring.rest") //для  <context:component-scan base-package="com.zaurtregulov.spring.rest"/>
 @EnableWebMvc //для <mvc:annotation-driven/>
 @EnableTransactionManagement // <tx:annotation-driven transaction-manager="transactionManager"/>
-public class MyConnfig {
+public class MyConfig {
     @Bean //для подключения к БД
     public DataSource dataSource() {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();

@@ -1,4 +1,4 @@
-package com.zaurtregulov.spring.mvc.entity;
+package com.zaurtregulov.spring.rest.entity;
 
 import jakarta.persistence.*;
 

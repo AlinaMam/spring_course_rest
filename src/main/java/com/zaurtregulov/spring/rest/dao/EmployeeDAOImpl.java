@@ -1,7 +1,6 @@
-package com.zaurtregulov.spring.mvc.dao;
+package com.zaurtregulov.spring.rest.dao;
 
-import com.zaurtregulov.spring.mvc.entity.Employee;
-import com.zaurtregulov.spring.mvc.dao.EmployeeDAO;
+import com.zaurtregulov.spring.rest.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +28,10 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     }
 
     @Override
-    public void saveEmployee(Employee employee) {
+    public Employee saveEmployee(Employee employee) {
         Session session = factory.getCurrentSession();
-        session.merge(employee);
+        Employee emp = session.merge(employee);
+        return emp;
     }
 
     @Override
